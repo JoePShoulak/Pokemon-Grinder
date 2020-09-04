@@ -42,6 +42,7 @@
 #include <avr/power.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
+
 #include <string.h>
 
 #include <LUFA/Drivers/USB/USB.h>
@@ -67,7 +68,7 @@ typedef enum {
 	SWITCH_PLUS    = 0x200,
 	SWITCH_LCLICK  = 0x400,
 	SWITCH_RCLICK  = 0x800,
-	SWITCH_HOME    = 0x1000, // TODO: FOUND IT! SWITCH_HOME
+	SWITCH_HOME    = 0x1000, 
 	SWITCH_CAPTURE = 0x2000,
 } JoystickButtons_t;
 
