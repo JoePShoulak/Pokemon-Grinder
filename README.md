@@ -16,7 +16,7 @@ will put LUFA in the right directory.
 
 #### Thanks
 
-Thanks to kidGodzilla for all his work on this project. Below are this thanks as well. 
+Thanks to kidGodzilla for all his work on this project. Below are his thanks as well. 
 
 Thanks to https://github.com/bertrandom/snowball-thrower for the updated information which modifies the original script to throw snowballs in Zelda. This C Source is much easier to start from, and has a nice object interface for creating new command sequences.
 
