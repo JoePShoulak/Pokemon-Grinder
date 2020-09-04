@@ -35,6 +35,8 @@ typedef enum {
 	B,
 	L,
 	R,
+	L_BOOST,
+	R_BOOST,
 	THROW,
 	NOTHING,
 	PLUS,
@@ -105,11 +107,7 @@ static const command step[] = {
 	{ UP,        30 },
 	*/
 	
-	// HATCH EGGS
-	/* */
-	
-	
-	// FIRST COLUMN
+	//// GRAB EGGS TO HATCH ////
 	
 	// Open Pokemon Boxes
 	{ X,         5 },
@@ -143,54 +141,47 @@ static const command step[] = {
 	{ A,         5 },
 	{ LEFT,      5 },
 	{ A,         5 },
+	{ NOTHING, 100 },
 	
 	// Exit Menu
 	{ B,         5 },
-	{ NOTHING,  75 },
+	{ NOTHING, 100 },
 	{ B,         5 },
-	{ NOTHING,  75 },
+	{ NOTHING, 100 },
 	{ B,         5 },
-	{ NOTHING,  75 },
+	{ NOTHING, 100 },
 	
-	// Hatch Egg           // TODO: Add support for bike boosting. Can be defined in TODO below
+	//// HATCH EGGS ////
+	
+	// Face Left
 	{ LEFT,      5 },
 	{ NOTHING,  15 },
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
 		
-	{ LEFT,    850 }, //  Left
+	// Left
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
 	{ NOTHING,  50 },
 
+	// Face Right
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
 	{ RIGHT,     5 },
 	{ NOTHING,  15 },
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
-	
-	{ RIGHT,   900 }, //  Right
-	{ NOTHING,  50 },
-
-	{ PLUS,      5 },
-	{ NOTHING,  50 },
-	{ LEFT,      5 },
-	{ NOTHING,  15 },
-	{ PLUS,      5 },
-	{ NOTHING,  50 },
 		
-	{ LEFT,    850 }, //  Left
+	// Right
+	{ RIGHT,    10 },
+	{ R_BOOST, 350 },
+	{ RIGHT,    10 },
+	{ R_BOOST, 400 },
 	{ NOTHING,  50 },
 
-	{ PLUS,      5 },
-	{ NOTHING,  50 },
-	{ RIGHT,     5 },
-	{ NOTHING,  15 },
-	{ PLUS,      5 },
-	{ NOTHING,  50 },
-	
-	{ RIGHT,   900 }, //  Right
-	{ NOTHING,  50 },
-
+	// Face left
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
 	{ LEFT,      5 },
@@ -198,20 +189,59 @@ static const command step[] = {
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
 		
-	{ LEFT,    850 }, //  Left
+	// Left
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
 	{ NOTHING,  50 },
 
+	// Face Right
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
 	{ RIGHT,     5 },
 	{ NOTHING,  15 },
 	{ PLUS,      5 },
 	{ NOTHING,  50 },
-	
-	{ RIGHT,   900 }, //  Right
+		
+	// Right
+	{ RIGHT,    10 },
+	{ R_BOOST, 350 },
+	{ RIGHT,    10 },
+	{ R_BOOST, 400 },
 	{ NOTHING,  50 },
+
+	// Face Left
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ LEFT,      5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+		
+	// Left
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
+	{ LEFT,     10 },
+	{ L_BOOST, 350 },
+	{ NOTHING,  50 },
+
+	// Face Right
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ RIGHT,     5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+		
+	// Right
+	{ RIGHT,    10 },
+	{ R_BOOST, 350 },
+	{ RIGHT,    10 },
+	{ R_BOOST, 400 },
 	
 	// Hatch 5 Eggs	
+
 	{ A,         5 },
 	{ NOTHING, 800 },
 	{ A,         5 },
@@ -243,10 +273,19 @@ static const command step[] = {
 	{ A,         5 },
 	{ NOTHING, 800 },
 	{ A,         5 },
-	{ NOTHING,  50 },
+	{ NOTHING,  50 }, 
 	
-	{ RIGHT,   900 },
-	{ NOTHING,  50 },
+	// Right in case this command was missed because eggs were ready
+	{ RIGHT,    10 },
+	{ R_BOOST, 350 },
+	{ RIGHT,    10 },
+	{ R_BOOST, 400 },
+	
+	// Off Bike
+	{ PLUS,       5 },
+	{ NOTHING,   50 },
+	
+	//// STORE HATCHED POKEMON
 	
 	// Open Pokemon Boxes
 	{ X,         5 },
@@ -283,9 +322,7 @@ static const command step[] = {
 	{ A,         5 },
 	{ NOTHING,  20 },
 		
-	// SHUFFLE BOXES
-		
-	// BOX VIEW
+	// View Boxes
 	{ UP,        5 },
 	{ NOTHING,  20 },
 	{ UP,        5 },
@@ -295,7 +332,7 @@ static const command step[] = {
 	{ A,         5 },
 	{ NOTHING,  50 },
 	
-	// Shift Right
+	// Shift Boxes Right
 	{ Y,         5 },
 	{ RIGHT,     5 },
 	{ Y,         5 },
@@ -331,19 +368,17 @@ static const command step[] = {
 	{ Y,         5 },
 	{ NOTHING,  10 },
 	
-	// Down One
+	// Shift Box Down One
 	{ Y,         5 },
 	{ DOWN,      5 },
 	{ Y,         5 },
 	{ NOTHING,  10 },
 	
-	// Shift Left
+	// Shift Boxes Left
 	{ Y,         5 },
 	{ LEFT,      5 },
 	{ Y,         5 },
 	{ NOTHING,  10 },
-	
-	/* ONLY DOING ONE ROW and 2 in the next
 
 	{ Y,         5 },
 	{ LEFT,      5 },
@@ -380,20 +415,6 @@ static const command step[] = {
 	{ NOTHING,  10 },
 	{ A,         5 },
 	{ NOTHING,  50 },
-	
-	*/
-	
-	// Comment out below if doing all eggs
-	/* */
-	{ RIGHT,     5 },
-	{ NOTHING,  10 },
-	{ RIGHT,     5 },
-	{ NOTHING,  10 },
-	{ UP,        5 },
-	{ NOTHING,  10 },
-	{ A,         5 },
-	{ NOTHING,  50 },
-	/* */
 			
 	// Exit Menu
 	{ B,         5 },
@@ -406,12 +427,6 @@ static const command step[] = {
 	{ NOTHING, 150 },
 	{ B,         5 },
 	{ NOTHING, 150 },
-	
-	// Off Bike
-	{ PLUS,       5 },
-	{ NOTHING,   50 },
-	
-	/* */
 };
 
 // Main entry point.
@@ -644,8 +659,6 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 					ReportData->Button |= SWITCH_L;
 					break;
 					
-				// TODO: Add support for Bike boost left and right
-				/*
 				case L_BOOST:
 					ReportData->LX = STICK_MIN;		
 					ReportData->Button |= SWITCH_B;
@@ -655,7 +668,6 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 					ReportData->LX = STICK_MAX;		
 					ReportData->Button |= SWITCH_B;
 					break;
-				*/	
 
 				case THROW: // TODO: Delete this, we don't use it
 					ReportData->LY = STICK_MIN;				
