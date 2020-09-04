@@ -37,7 +37,6 @@ typedef enum {
 	R,
 	L_BOOST,
 	R_BOOST,
-	THROW,
 	NOTHING,
 	PLUS,
 	MINUS,
@@ -638,11 +637,6 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 				case R_BOOST:
 					ReportData->LX = STICK_MAX;		
 					ReportData->Button |= SWITCH_B;
-					break;
-
-				case THROW: // TODO: Delete this, we don't use it
-					ReportData->LY = STICK_MIN;				
-					ReportData->Button |= SWITCH_R;
 					break;
 
 				case TRIGGERS:
