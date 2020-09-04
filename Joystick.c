@@ -54,199 +54,364 @@ static const command step[] = {
 	{ NOTHING,  100 },
 	{ TRIGGERS,   5 },
 	{ NOTHING,  100 },
+	
+	// Dodge Glitch?
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	{ NOTHING,    1 },
+	
+	
+	  // GET EGGS
+	/* 
+	{ LEFT,       5 }, // Face and activate the lady
+	{ NOTHING,    5 },
 	{ A,          5 },
-	{ NOTHING,   50 },
-
-	// Save
+	{ NOTHING,   20 },
+	
+	{ A,          5 }, // Advance
+	{ NOTHING,   20 },	
+	
+	{ DOWN,       5 }, // Dodge Take Pokemon
+	{ NOTHING,   20 },
+	{ DOWN,       5 },
 	{ A,          5 },
+	{ NOTHING,  175 },
+	
+	{ A,          5 }, // Advance
+	{ NOTHING,   20 },
+	
+	{ DOWN,       5 }, // Dodge Take Pokemon
+	{ NOTHING,  125 },
+	
+	{ A,          5 }, // Advance (egg only)
 	{ NOTHING,  100 },
-	{ A,          5 },
-	{ NOTHING,  120 },
-	{ A,          5 },
-
-	// Walk to the girl
-
-	// Walk left
-	{ LEFT,     135 },
-	{ NOTHING,   25 },
-
-	// Walk down
-	{ DOWN,      44 },
-	{ NOTHING,   25 },
-
-	// Talk to her
-	{ A,          5 },
-	{ NOTHING,  200 },
-	{ A,          5 },
-	{ NOTHING,  200 },
-
-	// Up 4 times when arrive at menu
-	{ UP,         5 },
+	{ A,          5 }, // Advance (egg only)
 	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// After the extra quest is unlocked, it's 5
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// After the extra quest is unlocked, it's 6
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// In the Post-game, it's 8
-	{ UP,         5 },
-	{ NOTHING,   10 },
-	{ UP,         5 },
-	{ NOTHING,   10 },
-
-	// Press A to take item
-	{ A,          5 },
-	{ NOTHING,   20 },
-	{ A,          5 },
-	{ NOTHING,   20 },
-
-	// Enter Quest
-	{ A,          5 },
-	{ NOTHING,   20 },
-	{ A,          5 },
-	{ NOTHING,   20 },
-
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-
-	// Skip scene
-
-	// Press Plus
-	{ PLUS,       5 },
+	
+	// Walk for new Egg and back
+	{ DOWN,      20 },
 	{ NOTHING,   30 },
-	// Press X
-	{ X,          5 },
+	{ RIGHT,    250 },
 	{ NOTHING,   30 },
-	// Press up
+	{ LEFT,     250 },
+	{ NOTHING,   30 },
+	{ UP,        30 },
+	*/
+	
+	// HATCH EGGS
+	/* */
+	
+	
+	// FIRST COLUMN
+	
+	// Open Pokemon Boxes
+	{ X,         5 },
+	{ NOTHING,  50 },
+	{ A,         5 },
+	{ NOTHING,  60 },
+	{ R,         5 },
+	{ NOTHING, 150 },
+	
+	// Multiselect
+	{ Y,         5 },
+	{ NOTHING,  15 },
+	{ Y,         5 },
+	
+	// Grab 5 eggs
+	{ A,         5 },
 	{ UP,        5 },
-	{ NOTHING,  30 },
-	// Press A
-	{ A,          5 },
-	{ NOTHING,   30 },
+	{ A,         5 },
+	
+	// Place eggs in party
+	{ LEFT,      5 },
+	{ DOWN,      5 },
+	{ A,         5 },
+	
+	// Reorganize box
+	{ RIGHT,     5 },
+	{ UP,        5 },
+	{ A,         5 },
+	{ LEFT,      5 },
+	{ UP,        5 },
+	{ A,         5 },
+	{ LEFT,      5 },
+	{ A,         5 },
+	
+	// Exit Menu
+	{ B,         5 },
+	{ NOTHING,  75 },
+	{ B,         5 },
+	{ NOTHING,  75 },
+	{ B,         5 },
+	{ NOTHING,  75 },
+	
+	// Hatch Egg
+	{ LEFT,      5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+		
+	{ LEFT,    850 }, //  Left
+	{ NOTHING,  50 },
 
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  130 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ RIGHT,     5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	
+	{ RIGHT,   900 }, //  Right
+	{ NOTHING,  50 },
 
-	// Fast forward a little
-	{ R,         50 },
-	{ NOTHING,   15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ LEFT,      5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+		
+	{ LEFT,    850 }, //  Left
+	{ NOTHING,  50 },
 
-	// Set up thunder & fire spells
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ RIGHT,     5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	
+	{ RIGHT,   900 }, //  Right
+	{ NOTHING,  50 },
 
-	// First spell
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ LEFT,      5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+		
+	{ LEFT,    850 }, //  Left
+	{ NOTHING,  50 },
 
-	// L
-	{ L,          5 },
-	{ NOTHING,   15 },
-	// Down
-	{ DOWN,       5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   20 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	{ RIGHT,     5 },
+	{ NOTHING,  15 },
+	{ PLUS,      5 },
+	{ NOTHING,  50 },
+	
+	{ RIGHT,   900 }, //  Right
+	{ NOTHING,  50 },
+	
+	// Hatch 5 Eggs	
+	{ A,         5 },
+	{ NOTHING, 800 },
+	{ A,         5 },
+	{ NOTHING, 200 },
+	{ RIGHT,    10 },
+	{ NOTHING,  50 },
 
-	// Wait
-	{ NOTHING,   10 },
+	{ A,         5 },
+	{ NOTHING, 800 },
+	{ A,         5 },
+	{ NOTHING, 200 },
+	{ RIGHT,    10 },
+	{ NOTHING,  50 },
 
-	// Second spell
+	{ A,         5 },
+	{ NOTHING, 800 },
+	{ A,         5 },
+	{ NOTHING, 200 },
+	{ RIGHT,    10 },
+	{ NOTHING,  50 },
+	
+	{ A,         5 },
+	{ NOTHING, 800 },
+	{ A,         5 },
+	{ NOTHING, 200 },
+	{ RIGHT,    10 },
+	{ NOTHING,  50 },
 
-	// L
-	{ L,          5 },
-	{ NOTHING,   15 },
-	// Down
-	{ DOWN,       5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   15 },
-	// A
-	{ A,          5 },
-	{ NOTHING,   10 },
+	{ A,         5 },
+	{ NOTHING, 800 },
+	{ A,         5 },
+	{ NOTHING,  50 },
+	
+	{ RIGHT,   900 },
+	{ NOTHING,  50 },
+	
+	// Open Pokemon Boxes
+	{ X,         5 },
+	{ NOTHING,  50 },
+	{ A,         5 },
+	{ NOTHING,  60 },
+	{ R,         5 },
+	{ NOTHING, 150 },
+	
+	// Multiselect
+	{ Y,         5 },
+	{ NOTHING,  15 },
+	{ Y,         5 },
+	
+	// Grab party
+	{ LEFT,      5 },
+	{ NOTHING,  20 },
+	{ DOWN,      5 },
+	{ NOTHING,  20 },
+	{ A,         5 },
+	{ NOTHING,  20 },
+	{ UP,        5 },
+	{ NOTHING,  20 },
+	{ UP,        5 },
+	{ NOTHING,  20 },
+	{ A,         5 },
+	{ NOTHING,  20 },
+	
+	// Place in correct row
+	{ LEFT,      5 },
+	{ NOTHING,  20 },
+	{ UP,        5 },
+	{ NOTHING,  20 },
+	{ A,         5 },
+	{ NOTHING,  20 },
+		
+	// SHUFFLE BOXES
+		
+	// BOX VIEW
+	{ UP,        5 },
+	{ NOTHING,  20 },
+	{ UP,        5 },
+	{ NOTHING,  20 },
+	{ LEFT,      5 },
+	{ NOTHING,  20 },
+	{ A,         5 },
+	{ NOTHING,  50 },
+	
+	// Shift Right
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Auto battle
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Press minus
-	{ MINUS,      5 },
-	{ NOTHING,   10 },
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Hold R for a while
-	{ R,        500 },
-	{ R,        500 },
-	{ R,        380 },
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// If level 50-70, you might need more time in battle
-	// { R,        500 },
-	// { R,        500 },
-	// { R,        500 },
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Proceed past battle
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Press A
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
-	{ A,          5 },
-	{ NOTHING,   30 },
+	{ Y,         5 },
+	{ RIGHT,     5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+	
+	// Down One
+	{ Y,         5 },
+	{ DOWN,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+	
+	// Shift Left
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+	
+	/* ONLY DOING ONE ROW and 2 in the next
 
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-	{ NOTHING,  100 },
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Skip scene
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
 
-	// Press Plus
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+
+	{ Y,         5 },
+	{ LEFT,      5 },
+	{ Y,         5 },
+	{ NOTHING,  10 },
+	
+	// End on the first box
+	{ UP,        5 },
+	{ NOTHING,  10 },
+	{ A,         5 },
+	{ NOTHING,  50 },
+	
+	*/
+	
+	// Comment out below if doing all eggs
+	/* */
+	{ RIGHT,     5 },
+	{ NOTHING,  10 },
+	{ RIGHT,     5 },
+	{ NOTHING,  10 },
+	{ UP,        5 },
+	{ NOTHING,  10 },
+	{ A,         5 },
+	{ NOTHING,  50 },
+	/* */
+			
+	// Exit Menu
+	{ B,         5 },
+	{ NOTHING, 150 },
+	{ B,         5 },
+	{ NOTHING, 150 },
+	{ R,         5 },  // Save on the way out
+	{ NOTHING, 150 },
+	{ A,         5 },
+	{ NOTHING, 150 },
+	{ B,         5 },
+	{ NOTHING, 150 },
+	
+	// Off Bike
 	{ PLUS,       5 },
-	{ NOTHING,   15 },
-	// Press X
-	{ X,          5 },
-	{ NOTHING,   15 },
-	// Press up
-	{ UP,         5 },
-	{ NOTHING,   15 },
-	// Press A
-	{ A,          5 },
-	{ NOTHING,   20 },
-
-	// Wait a while
-	{ NOTHING,  200 },
-	{ NOTHING,  200 },
-	{ NOTHING,  90 },
-
-	// Go back to save point
-	// up
-	{ UP,        26 },
 	{ NOTHING,   50 },
-	// left
-	{ LEFT,       3 },
-	{ NOTHING,   50 },
-
-	// Wait before looping
-	// { NOTHING,   50 },
+	
+	/* */
 };
 
 // Main entry point.
