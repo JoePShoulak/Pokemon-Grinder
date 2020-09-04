@@ -67,7 +67,7 @@ typedef enum {
 	SWITCH_PLUS    = 0x200,
 	SWITCH_LCLICK  = 0x400,
 	SWITCH_RCLICK  = 0x800,
-	SWITCH_HOME    = 0x1000,
+	SWITCH_HOME    = 0x1000, // TODO: FOUND IT! SWITCH_HOME
 	SWITCH_CAPTURE = 0x2000,
 } JoystickButtons_t;
 

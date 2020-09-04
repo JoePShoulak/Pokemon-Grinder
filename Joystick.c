@@ -152,7 +152,7 @@ static const command step[] = {
 	{ B,         5 },
 	{ NOTHING,  75 },
 	
-	// Hatch Egg
+	// Hatch Egg           // TODO: Add support for bike boosting. Can be defined in TODO below
 	{ LEFT,      5 },
 	{ NOTHING,  15 },
 	{ PLUS,      5 },
@@ -643,8 +643,21 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 				case L:
 					ReportData->Button |= SWITCH_L;
 					break;
+					
+				// TODO: Add support for Bike boost left and right
+				/*
+				case L_BOOST:
+					ReportData->LX = STICK_MIN;		
+					ReportData->Button |= SWITCH_B;
+					break;
 
-				case THROW:
+				case R_BOOST:
+					ReportData->LX = STICK_MAX;		
+					ReportData->Button |= SWITCH_B;
+					break;
+				*/	
+
+				case THROW: // TODO: Delete this, we don't use it
 					ReportData->LY = STICK_MIN;				
 					ReportData->Button |= SWITCH_R;
 					break;
