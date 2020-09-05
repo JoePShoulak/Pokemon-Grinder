@@ -158,7 +158,7 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Left
-	{ LEFT,    750 },
+	{ LEFT,    825 },
 	{ NOTHING,  15 },
 
 	// Face Right
@@ -170,7 +170,7 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Right
-	{ RIGHT,   725 },
+	{ RIGHT,   850 },
 	{ NOTHING,  15 },
 
 	// Face left
@@ -182,7 +182,7 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Left
-	{ LEFT,    725 },
+	{ LEFT,    825 },
 	{ NOTHING,  15 },
 
 	// Face Right
@@ -194,7 +194,7 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Right
-	{ RIGHT,   750 },
+	{ RIGHT,   850 },
 	{ NOTHING,  15 },
 
 	// Face Left
@@ -206,7 +206,7 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Left
-	{ LEFT,    725 },
+	{ LEFT,    825 },
 	{ NOTHING,  15 },
 
 	// Face Right
@@ -218,41 +218,41 @@ static const command step[] = {
 	{ NOTHING,  15 },
 		
 	// Right
-	{ RIGHT,   750 },
+	{ RIGHT,   850 },
 	{ NOTHING,  15 },
 	
 	// Hatch 5 Eggs	
 	{ A,         5 },
-	{ NOTHING, 750 },
+	{ NOTHING, 900 },
 	{ A,         5 },
-	{ NOTHING, 100 },
+	{ NOTHING, 150 },
 	{ RIGHT,     5 },
-	{ NOTHING,   5 },
+	{ NOTHING,  30 },
 
 	{ A,         5 },
-	{ NOTHING, 750 },
+	{ NOTHING, 900 },
 	{ A,         5 },
-	{ NOTHING, 100 },
+	{ NOTHING, 150 },
 	{ RIGHT,     5 },
-	{ NOTHING,   5 },
-
-	{ A,         5 },
-	{ NOTHING, 750 },
-	{ A,         5 },
-	{ NOTHING, 100 },
-	{ RIGHT,     5 },
-	{ NOTHING,   5 },
+	{ NOTHING,  30 },
 	
 	{ A,         5 },
-	{ NOTHING, 750 },
+	{ NOTHING, 900 },
 	{ A,         5 },
-	{ NOTHING, 100 },
+	{ NOTHING, 150 },
 	{ RIGHT,     5 },
-	{ NOTHING,   5 },
+	{ NOTHING,  30 },
 
 	{ A,         5 },
-	{ NOTHING, 750 },
+	{ NOTHING, 900 },
 	{ A,         5 },
+	{ NOTHING, 150 },
+	{ RIGHT,     5 },
+	{ NOTHING,  30 },
+
+	{ A,         5 },
+	{ NOTHING, 900 },
+	{ A,        30 },
 	
 	// Right in case this command was missed because eggs were ready
 	{ RIGHT,    10 },
